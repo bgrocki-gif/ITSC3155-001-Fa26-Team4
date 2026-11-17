@@ -1,12 +1,12 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Numeric
-from dependencies.database import Base
+from ..dependencies.database import Base
 
 
 class Order(Base):
     __tablename__ = "orders"
 
     order_id = Column(Integer, primary_key=True, index=True)
-    customer_id = Column(Integer, ForeignKey("customers.customer_id"), nullable=True)
+    user_id = Column(Integer, ForeignKey("users.user_id"), nullable=True)
     promo_id = Column(Integer, ForeignKey("promotions.promo_id"), nullable=True)
     order_date = Column(DateTime, nullable=False)
     status = Column(String(50), nullable=False)

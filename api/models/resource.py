@@ -1,5 +1,5 @@
-from sqlalchemy import Column, Integer, String, Numeric
-from dependencies.database import Base
+from sqlalchemy import Column, Integer, String, Numeric, DateTime
+from ..dependencies.database import Base
 
 
 class Resource(Base):

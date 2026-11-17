@@ -1,11 +1,11 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status, Response, Depends
-from ..models import order_details as model
+from ..models import order_item as model
 from sqlalchemy.exc import SQLAlchemyError
 
 
 def create(db: Session, request):
-    new_item = model.OrderDetail(
+    new_item = model.OrderItem(
         order_id=request.order_id,
         sandwich_id=request.sandwich_id,
         amount=request.amount

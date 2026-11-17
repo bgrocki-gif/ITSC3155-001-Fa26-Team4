@@ -10,7 +10,7 @@ from . import (
     order_item
 )
 
-from dependencies.database import engine
+from ..dependencies.database import engine
 
 
 def index():
