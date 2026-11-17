@@ -1,7 +1,7 @@
 from typing import Optional
 from pydantic import BaseModel
 from .resources import Resource
-from .menu_items import MenuItem
+from .menu_item import MenuItem
 
 class RecipeBase(BaseModel):
     amount: int

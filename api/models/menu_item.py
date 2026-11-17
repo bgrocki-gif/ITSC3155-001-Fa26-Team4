@@ -10,4 +10,4 @@ class MenuItem(Base):
     name = Column(String(100), nullable=False)
     description = Column(Text,nullable=False)
     price = Column(Numeric(10, 2), nullable=False)
-    available = Column(Boolean, nullable=False, dafault=True)
+    available = Column(Boolean, nullable=False, default=True)

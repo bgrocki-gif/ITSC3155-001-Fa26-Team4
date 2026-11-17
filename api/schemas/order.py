@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 from pydantic import BaseModel
-from .order_details import OrderDetail
+from .order_item import OrderDetail
 
 class OrderBase(BaseModel):
     customer_id: Optional[int] = None
