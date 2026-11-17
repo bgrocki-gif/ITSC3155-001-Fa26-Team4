@@ -3,21 +3,21 @@ from typing import Optional
 from pydantic import BaseModel
 
 class ReviewBase(BaseModel):
-    customer_id: int
+    user_id: int
     order_id: int
-    review_text: Optional[str] = None
-    score: int
-    review_date: date
+    rating: int
+    comment: Optional[str] = None
+    date: date
 
 class ReviewCreate(ReviewBase):
     pass
 
 class ReviewUpdate(BaseModel):
-    review_text: Optional[str] = None
-    score: Optional[int] = None
+    rating: Optional[int] = None
+    comment: Optional[str] = None
 
 class Review(ReviewBase):
-    id: int
+    review_id: int
 
     class ConfigDict:
         from_attributes = True

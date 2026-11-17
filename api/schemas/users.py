@@ -2,7 +2,8 @@ from typing import Optional
 from pydantic import BaseModel
 
 class UserBase(BaseModel):
-    name: str
+    first_name: str
+    last_name: str
     email: str
     role: str = "customer"
     phone: Optional[str] = None
@@ -12,7 +13,8 @@ class UserCreate(UserBase):
     password: str
 
 class UserUpdate(BaseModel):
-    name: Optional[str] = None
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
     email: Optional[str] = None
     password: Optional[str] = None
     role: Optional[str] = None
@@ -20,7 +22,7 @@ class UserUpdate(BaseModel):
     address: Optional[str] = None
 
 class User(UserBase):
-    id: int
+    user_id: int
 
     class ConfigDict:
         from_attributes = True
