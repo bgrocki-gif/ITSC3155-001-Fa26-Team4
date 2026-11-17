@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Numeric
-from ..dependencies.database import Base
+from dependencies.database import Base
 
 
 class Payment(Base):

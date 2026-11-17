@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, ForeignKey, Text, Date
-from ..dependencies.database import Base
+from dependencies.database import Base
 
 
 class Review(Base):
